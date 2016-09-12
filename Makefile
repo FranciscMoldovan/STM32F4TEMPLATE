@@ -37,7 +37,6 @@ $(OBJDIR)/%.elf: $(OBJS)
 	$(OBJCOPY) -O binary $^ $@
 
 $(OBJDIR)/%.o: %.c
-	mkdir -p $(dir $@)
 	$(CC) -c $(CFLAGS) -o $@ $^
 
 $(OBJDIR)/%.o: %.s
